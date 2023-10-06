@@ -3,28 +3,9 @@ import Card from './Card'
 import Message from './Message'
 import './app.css'
 
-const data = [
-  {
-    value: 1,
-    selected: false
-  },
-  {
-    value: 2,
-    selected: false
-  },
-  {
-    value: 3,
-    selected: false
-  },
-  {
-    value: 4,
-    selected: false
-  },
-  {
-    value: 5,
-    selected: false
-  },
-]
+const data = [...Array(5)].map((_, idx) => {
+  return { value: (idx + 1), selected: false }
+})
 
 const App = () => {
   const [ratings, setRatings] = useState(data)
